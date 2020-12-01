@@ -81,3 +81,53 @@ function validateEmail(email) {
 
     return `${email} is not a valid email`;
 }
+
+const questions = [
+    {
+        name: "username",
+        message: "What is your GitHub username?",
+        default: "joel-clifford-bootcamp",
+        validate: verifyGitHubAccount
+    },
+    {
+        type: "list",
+        name: "repoName",
+        message: "Select the project repo:",
+        filter: setRepoDefaults
+    },
+    {
+        name: "title",
+        message: "Enter the project title:",
+    },
+    {
+        name: "description",
+        message: "Enter project description:",
+    },
+    {
+        name: "installation",
+        message: "Enter installation instructions:"
+    },
+    {
+        name: "usage",
+        message: "Enter usage instructions:"
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Select license type:",
+        choices: ["copyleft", "lpgl", "MIT", "permissive", "proprietary", "public"]
+    },
+    {
+        name: "contributors",
+        message: "Enter contributors:"
+    },
+    {
+        name: "tests",
+        message: "Enter tests:"
+    },
+    {
+        name: "email",
+        message: "Enter contact email:",
+        validate: validateEmail
+    }
+];
