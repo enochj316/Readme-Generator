@@ -86,7 +86,7 @@ const questions = [
     {
         name: "username",
         message: "What is your GitHub username?",
-        default: "joel-clifford-bootcamp",
+        default: "Joyson-Enoch",
         validate: verifyGitHubAccount
     },
     {
@@ -131,3 +131,28 @@ const questions = [
         validate: validateEmail
     }
 ];
+
+function init() {
+
+    inquirer.prompt(questions).then(resp => {
+
+        generateReadMe(resp);
+    });
+}
+
+function generateReadMe(responses) {
+
+    fs.writeFile
+        (
+            "./export/README.md",
+            ReadMe.getReadMe(gitHubUserInfo, responses),
+            (err) => {
+                if (err)
+                    console.log("An error occured while writing file");
+                else
+                    console.log("File saved");
+            }
+        );
+}
+
+init();

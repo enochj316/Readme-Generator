@@ -18,6 +18,7 @@
   "homepage": "https://github.com/enochj316/Readme-Generator#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "email-validator": "^2.0.4",
     "inquirer": "^7.3.3"
   }
 }
