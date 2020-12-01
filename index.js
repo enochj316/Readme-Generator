@@ -72,3 +72,12 @@ function setRepoDefaults(repoName) {
             });
     })
 }
+
+// Validate e-mail
+function validateEmail(email) {
+
+    if (validator.validate(email))
+        return true;
+
+    return `${email} is not a valid email`;
+}
