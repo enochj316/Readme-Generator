@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const axios = require("axios");
 const fs = require("fs");
-const template = require('./ReadMe.js');
+const template = require('./template.js');
 const validator = require('email-validator');
 
 let gitHubUserInfo;
@@ -115,7 +115,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Select license type:",
-        choices: ["copyleft", "lpgl", "MIT", "permissive", "proprietary", "public"]
+        choices: ["Academic Free License v3.0", "ISC", "MIT", "public"]
     },
     {
         name: "contributors",
@@ -145,7 +145,7 @@ function generateReadMe(responses) {
     fs.writeFile
         (
             "./export/README.md",
-            ReadMe.getReadMe(gitHubUserInfo, responses),
+            template.getReadMe(gitHubUserInfo, responses),
             (err) => {
                 if (err)
                     console.log("An error occured while writing file");
@@ -153,6 +153,7 @@ function generateReadMe(responses) {
                     console.log("File saved");
             }
         );
+
 }
 
 init();
