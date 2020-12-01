@@ -42,4 +42,33 @@ async function verifyGitHubAccount(username) {
     }
 }
 
+// Filter callback for repo selection question
 
+function setRepoDefaults(repoName) {
+
+    return new Promise((resolve, reject) => {
+
+        confirmedRepo = gitHubRepo.find(repo => repo.name == repoName);
+
+
+        // Set repo name and description as defaults for Title and Description 
+
+        questions[2].default = confirmedRepo.description;
+
+        // Get contributors and tags from repo
+        axios
+            .all([
+                axios.get(confirmedRepo.contributors_url),
+                axios.get(confirmedRepo.tags_url)
+            ])
+            .then(respArr => {
+                // Set repo contributors as default for Contributors question
+                questions[7].default = respArr[0].data.map(contributor => contributor.login).join(',');
+
+                resolve(repoName);
+            })
+            .catch(err => {
+                reject(new Error("Could not set defaults"));
+            });
+    })
+}
