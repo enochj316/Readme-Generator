@@ -4,17 +4,8 @@
   
 I've created an easy to use **ReadMe Generator**, using Node.  Following the simple guides, you'd be able to develop professional ReadMe. 
 
-![Demo of Main page](assets/img/demo.jpg)
-
-App uses three different APIs:
- * [Love Calculator API](https://rapidapi.com/ajith/api/love-calculator) to find Love compatibility & chances of successful love relationship based on names.
- * [Numbers API](https://rapidapi.com/divad12/api/numbers-1) - an API for interesting facts about numbers. Provides trivia, math, date, and year facts about numbers.
- * [GIPHY API](https://developers.giphy.com/docs/api/) -  content library of GIFs and Stickers to make app more fun end express emotions.
-
-HTTP requests are implemented with use of AJAX, JSON to get data from third-party server-side APIs.
-
-  
-
+![Demo](utlis\Untitled.jpg)
+ 
 ## Installation
 
   
