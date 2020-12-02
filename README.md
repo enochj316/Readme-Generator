@@ -1,5 +1,5 @@
 
-# ReadmeGenerator ![Bootstrap](https://img.shields.io/badge/Powered%20By-gray) <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> 
+# ReadmeGenerator ![Bootstrap](https://img.shields.io/badge/Powered%20By-gray) <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://media.badgr.com/uploads/badges/issuer_badgeclass_69d0ad16-d2f9-4306-b117-79113747462a.png"/> 
 
   
 I've created an easy to use **ReadMe Generator**, using Node.  Following the simple guides, you'd be able to develop professional ReadMe. 
