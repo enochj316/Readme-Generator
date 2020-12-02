@@ -4,7 +4,7 @@
   
 I've created an easy to use **ReadMe Generator**, using Node.  Following the simple guides, you'd be able to develop professional ReadMe. 
 
-![Demo](../utlis\Untitled.jpg)
+![Demo](utlis/Untitled.jpg)
  
 ## Usage
 
